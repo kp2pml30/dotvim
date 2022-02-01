@@ -1,0 +1,76 @@
+[options]
+	colorscheme = "SpaceVim"
+	colorscheme_bg = "dark"
+	enable_guicolors = true
+	statusline_separator = "arrow"
+	statusline_inactive_separator = "arrow"
+	buffer_index_type = 4
+	enable_tabline_filetype_icon = true
+	enable_statusline_mode = false
+	filemanager = "nerdtree"
+	filetree_direction = "lef"
+	project_rooter_automatically = 0
+	autocomplete_method = "coc"
+	windows_smartclose = ''
+	guifont = 'FiraCode Nerd Font Mono'
+	bootstrap_after = 'myspacevim#after'
+	bootstrap_before = 'myspacevim#before'
+
+[[layers]]
+	name = 'autocomplete'
+	auto-completion-return-key-behavior = "complete"
+	auto-completion-tab-key-behavior = "smart"
+
+#[[layers]]
+#	name = "debug"
+
+[[layers]]
+	name = 'shell'
+	default_position = 'top'
+	default_height = 30
+
+[[layers]]
+	name = "colorscheme"
+
+[[layers]]
+	name = "gtags"
+	gtagslabel = "ctags"
+
+[[layers]]
+	name = "lang#toml"
+[[layers]]
+	name = "lang#c"
+	[layer.clang_std]
+		cpp = "c20"
+
+[[layers]]
+	name = "lsp"
+	filetypes = [
+			'c',
+			'cpp',
+			'haskell'
+		]
+	[layers.override_cmd]
+		haskell = ['haskell-language-server-wrapper', '--lsp']
+
+[[layers]]
+	name = "lang#ruby"
+[[layers]]
+	name = "lang#python"
+[[layers]]
+	name = "lang#vim"
+[[layers]]
+	name = "lang#java"
+[[layers]]
+	name = "lang#haskell"
+
+[[custom_plugins]]
+	name = 'chrismccord/bclose.vim'
+
+[[custom_plugins]]
+	name = 'junegunn/fzf'
+[[custom_plugins]]
+	name = 'monkoose/fzf-hoogle.vim'
+
+[[layers]]
+	name = "format"
