@@ -1,15 +1,17 @@
 {
-  "languageserver": {
-    "haskell": {
-      "command": "haskell-language-server-wrapper",
-      "args": [ "--lsp" ],
-      "rootPatterns": [ "*.cabal", "cabal.config", "cabal.project", "package.yaml", "stack.yaml" ],
-      "filetypes": [ "hs", "lhs", "haskell" ],
-      "initializationOptions": {
-        "languageServerHaskell": { "hlintOn": true },
-        "haskell.formattingProvider": "stylish-haskell",
-        "haskell.plugin.tactics.globalOn": true
-      }
-    }
-  }
+	"languageserver": {
+		"cpp": {
+			"command": "clangd",
+			"filetypes": ["cpp", "h", "hpp"]
+		},
+		"haskell": {
+			"command": "haskell-language-server-wrapper",
+			"args": ["--lsp"],
+			"rootPatters": ["*.cabal", "cabal.config", "cabal.project", "stack.yaml"],
+			"filetypes": ["hs", "lhs", "haskell"],
+			"initilizationOptions": {
+				"languageServerHaskell": { "hlintOn": true }
+			}
+		}
+	}
 }
