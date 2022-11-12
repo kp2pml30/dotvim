@@ -7,6 +7,7 @@ call plug#begin()
 	Plug 'spinks/vim-leader-guide'
 	Plug 'feline-nvim/feline.nvim'
 	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+	Plug 'timakro/vim-yadi'
 call plug#end()
 
 set termguicolors
@@ -35,13 +36,16 @@ imap <Home> <C-o><Home>
 
 let s:i = 1
 while s:i < 10
-	execute printf('map <Leader>%i :BufferGoto %i<CR>', s:i, s:i)
+	execute printf('nmap <Leader>%i :BufferGoto %i<CR>', s:i, s:i)
+	execute printf('nmap <Space>%i %i<C-w><C-w>', s:i, s:i)
 	let s:i += 1
 endwhile
 
 nmap <C-Right> :BufferNext<CR>
 nmap <C-Left> :BufferPrevious<CR>
 nmap <C-q> :BufferClose<CR>
+
+autocmd BufRead * DetectIndent
 
 vnoremap > >gv
 vnoremap < <gv
